@@ -7,27 +7,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" >
     <link href="../css/Employee.css" rel="stylesheet">
     <title>Employee Payroll App</title>
+    <script defer src="../js/Employee.js"></script>
+    <script defer src="../js/NewPayroll.js"></script>
 </head>
 <body>
     <header class="header-content header">
         <div class="logo-content">
             <img src = "../assets/images/logo.png" alt="">
             <div>
-                <span class="Employee-text">EMPLOYEE</span>
-                <span class="Employee-text Employee-payroll">PAYROLL</span>
+                <span class="emp-text">EMPLOYEE</span>
+                <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
 
         </div>
 
     </header>
     <div class="from-content">
-        <form class="from" action="#">
+        <form class="from" action="#" onreset="resetFrom()" onsubmit="save()">
             <div class="from-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">
                     Name
                 </label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name" required/>
+                <error-output class="text-error" for="text"></error-output> 
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
